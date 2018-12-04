@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "AllSort.h"
+#import "HeapSort.h"
 
 @interface SortTests : XCTestCase
 
@@ -54,6 +55,12 @@
 - (void)testCountingSort {
     int c[11] = {3, 8, 2, 10, 2, 5, 7, 5, 3, 6, 1};
     countingSort(c, 11);
+    printArray(c, 11);
+}
+
+- (void)testHeapSort {
+    int c[11] = {3, 8, 2, 10, 2, 5, 7, 5, 3, 6, 1};
+    heap_sort(c, 11);
     printArray(c, 11);
 }
 

@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+void swap(int a[], int i, int j);
+
 void bubbleSort(int a[], int n);
 
 void insertionSort(int a[], int n);
