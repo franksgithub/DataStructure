@@ -1,8 +1,8 @@
 //
-//  HeapSort.h
+//  Common.h
 //  DataStructure
 //
-//  Created by Qiang on 2018/11/26.
+//  Created by Qiang on 2018/12/5.
 //  Copyright © 2018 Qiang. All rights reserved.
 //
 
@@ -10,11 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-void heap_sort(int a[], int length);
+@interface Common : NSObject
 
-void buildHeap(int a[], int length);
-
-@interface HeapSort : NSObject
++ (NSString *)transforMoneyWithValue:(float)value;
 
 @end
 

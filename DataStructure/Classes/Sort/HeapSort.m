@@ -75,7 +75,7 @@ void heapify(int a[], int length, int i) {
 @end
 
 void buildHeap(int a[], int length) {
-    for (int i = length / 2; i >= 1; i++) {
+    for (int i = length / 2; i >= 1; --i) {
         heapify(a, length, i);
     }
 }
