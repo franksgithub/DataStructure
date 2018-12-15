@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F70BB8A521B4BD03002FD205 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BB8A421B4BD03002FD205 /* Graph.m */; };
+		F746692421C3916700B105A6 /* ACMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = F746692221C3916700B105A6 /* ACMachine.m */; };
 		F74CDAD6217440830078222F /* AllSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD5217440830078222F /* AllSort.m */; };
 		F74CDAD8217440D00078222F /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD7217440D00078222F /* SortTests.m */; };
 		F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */; };
+		F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = F75EFEFE21C0A5EF007A0DCF /* Trie.m */; };
 		F77E1D3021B76510009F919D /* StringMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D2F21B76510009F919D /* StringMatch.m */; };
 		F77E1D3221B7657B009F919D /* StringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D3121B7657B009F919D /* StringTests.m */; };
 		F77E1D5C21B7CD90009F919D /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D5B21B7CD90009F919D /* Common.m */; };
@@ -56,10 +58,14 @@
 /* Begin PBXFileReference section */
 		F70BB8A321B4BD03002FD205 /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		F70BB8A421B4BD03002FD205 /* Graph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		F746692221C3916700B105A6 /* ACMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMachine.m; sourceTree = "<group>"; };
+		F746692321C3916700B105A6 /* ACMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMachine.h; sourceTree = "<group>"; };
 		F74CDAD4217440830078222F /* AllSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSort.h; sourceTree = "<group>"; };
 		F74CDAD5217440830078222F /* AllSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSort.m; sourceTree = "<group>"; };
 		F74CDAD7217440D00078222F /* SortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTests.m; sourceTree = "<group>"; };
 		F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphTests.m; sourceTree = "<group>"; };
+		F75EFEFD21C0A5EF007A0DCF /* Trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
+		F75EFEFE21C0A5EF007A0DCF /* Trie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trie.m; sourceTree = "<group>"; };
 		F77E1D2E21B76510009F919D /* StringMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringMatch.h; sourceTree = "<group>"; };
 		F77E1D2F21B76510009F919D /* StringMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringMatch.m; sourceTree = "<group>"; };
 		F77E1D3121B7657B009F919D /* StringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTests.m; sourceTree = "<group>"; };
@@ -150,8 +156,12 @@
 		F77E1D2D21B764FD009F919D /* String */ = {
 			isa = PBXGroup;
 			children = (
+				F746692321C3916700B105A6 /* ACMachine.h */,
+				F746692221C3916700B105A6 /* ACMachine.m */,
 				F77E1D2E21B76510009F919D /* StringMatch.h */,
 				F77E1D2F21B76510009F919D /* StringMatch.m */,
+				F75EFEFD21C0A5EF007A0DCF /* Trie.h */,
+				F75EFEFE21C0A5EF007A0DCF /* Trie.m */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -423,10 +433,12 @@
 				F783EB7621801016000DB897 /* LinkListQueue.m in Sources */,
 				F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */,
 				F7A7A4AE216EEB47007E86C5 /* AppDelegate.m in Sources */,
+				F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */,
 				F783EB7421801016000DB897 /* CircleQueue.m in Sources */,
 				F783EB5F21800380000DB897 /* AllSearch.m in Sources */,
 				F74CDAD6217440830078222F /* AllSort.m in Sources */,
 				F783EB7321801016000DB897 /* ArrayQueue.m in Sources */,
+				F746692421C3916700B105A6 /* ACMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

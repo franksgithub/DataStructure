@@ -18,4 +18,6 @@ BOOL str_match(NSString *source, NSString *target);
 
 void testDecorator(void);
 
+int bm_match(char source[], int s_len, char pattern[], int p_len);
+
 NS_ASSUME_NONNULL_END

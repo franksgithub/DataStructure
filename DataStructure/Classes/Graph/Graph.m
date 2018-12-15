@@ -31,9 +31,9 @@
     return self;
 }
 
-- (void)addEdgeWithVertexA:(NSInteger)vertextA vertexB:(NSInteger)vertexB {
-    [_vertexs[vertextA] addObject:@(vertexB)];
-    [_vertexs[vertexB] addObject:@(vertextA)];
+- (void)addEdgeWithVertexA:(NSInteger)vertexA vertexB:(NSInteger)vertexB {
+    [_vertexs[vertexA] addObject:@(vertexB)];
+    [_vertexs[vertexB] addObject:@(vertexA)];
 }
 
 - (void)bfsWithStart:(NSInteger)start target:(NSInteger)target {

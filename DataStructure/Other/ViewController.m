@@ -23,6 +23,11 @@
         //并不会执行dowork,因为子线程的runloop默认是未启动的
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(dowork) userInfo:nil repeats:YES];
     });
+    
+    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(dowork)];
+    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
+    self.view.layer.contents = (__bridge id)[UIImage new].CGImage;
 }
 
 - (void)dowork {

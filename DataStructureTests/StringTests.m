@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "StringMatch.h"
+#import "Trie.h"
 
 @interface StringTests : XCTestCase
 
@@ -28,11 +29,30 @@
     NSLog(@"match : %@", match ? @"YES" : @"NO");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        testDecorator();
-    }];
+- (void)testBMMatch {
+    char *source = "what is your name, name is not good abccbaabccbaafc";
+    char *pattern = "ccba";
+    int match_index = bm_match(source, (int)strlen(source), pattern, (int)strlen(pattern));
+    NSLog(@"match index : %d", match_index);
+}
+
+- (void)testTrie {
+    NSString *text = @"what";
+    Trie *trie = [[Trie alloc] init];
+    [trie insert:text];
+    text = @"why";
+    [trie insert:text];
+    text = @"when";
+    [trie insert:text];
+    text = @"wheather";
+    [trie insert:text];
+    text = @"wheh";
+    [trie insert:text];
+    text = @"whatisyourname";
+    [trie insert:text];
+    NSString *pattern = @"what";
+    BOOL match = [trie find:pattern];
+    NSLog(@"match : %d", match);
 }
 
 @end
