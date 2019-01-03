@@ -95,17 +95,6 @@ void merge_sort_c(int a[], int start, int end) {
     merge(a, start, mid, end);
 }
 
-void mergeSortMain(int array[], int start, int end) {
-    if (array == NULL || start >= end) {
-        return;
-    }
-    int mid = (start + end) / 2;
-    mergeSortMain(array, start, mid);
-    mergeSortMain(array, mid + 1, end);
-    realMerge(array, start, mid, end);
-    
-}
-
 void merge(int a[], int start, int mid, int end) {
     int i = start, j = mid + 1, k = 0;
     int tmp[end - start + 1];
@@ -132,6 +121,17 @@ void merge(int a[], int start, int mid, int end) {
     }
 }
 
+void mergeSortMain(int array[], int start, int end) {
+    if (array == NULL || start >= end) {
+        return;
+    }
+    int mid = (start + end) / 2;
+    mergeSortMain(array, start, mid);
+    mergeSortMain(array, mid + 1, end);
+    realMerge(array, start, mid, end);
+    
+}
+
 void realMerge(int array[], int start, int mid, int end) {
     int leftStart = start, rightStart = mid + 1, tempStart = 0;
     int temp[end - start + 1];
@@ -153,7 +153,7 @@ void realMerge(int array[], int start, int mid, int end) {
     }
     
     for (int i = 0; i <= (end - start); i++) {
-        array[i] = temp[i];
+        array[start + i] = temp[i];
     }
 }
 

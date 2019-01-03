@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface Common : NSObject
 
@@ -16,4 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+void bag(int curIndex, int curWeight, int items[], int itemCount, int bagWeight);
+
+void cal8Queens(int row);
+
+int knapsack(int weight[], int n, int w);
+int knapsack2(int weight[], int n, int w);
+
+void swapTest();

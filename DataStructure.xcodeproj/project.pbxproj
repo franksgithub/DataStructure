@@ -13,6 +13,9 @@
 		F74CDAD8217440D00078222F /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD7217440D00078222F /* SortTests.m */; };
 		F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */; };
 		F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = F75EFEFE21C0A5EF007A0DCF /* Trie.m */; };
+		F769BA8B21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
+		F769BA8C21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
+		F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8D21DC6BB800801BF3 /* DPTests.m */; };
 		F77E1D3021B76510009F919D /* StringMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D2F21B76510009F919D /* StringMatch.m */; };
 		F77E1D3221B7657B009F919D /* StringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D3121B7657B009F919D /* StringTests.m */; };
 		F77E1D5C21B7CD90009F919D /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D5B21B7CD90009F919D /* Common.m */; };
@@ -66,6 +69,9 @@
 		F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphTests.m; sourceTree = "<group>"; };
 		F75EFEFD21C0A5EF007A0DCF /* Trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
 		F75EFEFE21C0A5EF007A0DCF /* Trie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trie.m; sourceTree = "<group>"; };
+		F769BA8921DC68F900801BF3 /* DP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DP.h; sourceTree = "<group>"; };
+		F769BA8A21DC68F900801BF3 /* DP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DP.m; sourceTree = "<group>"; };
+		F769BA8D21DC6BB800801BF3 /* DPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPTests.m; sourceTree = "<group>"; };
 		F77E1D2E21B76510009F919D /* StringMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringMatch.h; sourceTree = "<group>"; };
 		F77E1D2F21B76510009F919D /* StringMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringMatch.m; sourceTree = "<group>"; };
 		F77E1D3121B7657B009F919D /* StringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTests.m; sourceTree = "<group>"; };
@@ -151,6 +157,15 @@
 				F7FCC33721AC22F000C33EA7 /* HeapSort.m */,
 			);
 			path = Sort;
+			sourceTree = "<group>";
+		};
+		F769BA8821DC68D600801BF3 /* DP */ = {
+			isa = PBXGroup;
+			children = (
+				F769BA8921DC68F900801BF3 /* DP.h */,
+				F769BA8A21DC68F900801BF3 /* DP.m */,
+			);
+			path = DP;
 			sourceTree = "<group>";
 		};
 		F77E1D2D21B764FD009F919D /* String */ = {
@@ -257,6 +272,7 @@
 				F7840A0621B6251600A4BB1B /* HeapTests.m */,
 				F77E1D3121B7657B009F919D /* StringTests.m */,
 				F77E1D5D21B7D4AB009F919D /* CommonTest.m */,
+				F769BA8D21DC6BB800801BF3 /* DPTests.m */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -273,6 +289,7 @@
 		F7A7A4DE216EEB5E007E86C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F769BA8821DC68D600801BF3 /* DP */,
 				F77E1D2D21B764FD009F919D /* String */,
 				F783EB6921801016000DB897 /* Structure */,
 				F70BB8A221B4BCF1002FD205 /* Graph */,
@@ -423,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F769BA8B21DC68F900801BF3 /* DP.m in Sources */,
 				F70BB8A521B4BD03002FD205 /* Graph.m in Sources */,
 				F7F0852321991A4C000096F4 /* BinaryTree.m in Sources */,
 				F7A7A4B1216EEB47007E86C5 /* ViewController.m in Sources */,
@@ -451,6 +469,8 @@
 				F77E1D3221B7657B009F919D /* StringTests.m in Sources */,
 				F7A7A4C6216EEB49007E86C5 /* DataStructureTests.m in Sources */,
 				F74CDAD8217440D00078222F /* SortTests.m in Sources */,
+				F769BA8C21DC68F900801BF3 /* DP.m in Sources */,
+				F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */,
 				F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */,
 				F77E1D5E21B7D4AB009F919D /* CommonTest.m in Sources */,
 				F783EB6821800BC5000DB897 /* SearchTests.m in Sources */,

@@ -29,6 +29,35 @@
     NSLog(@"money : %@", moneyStr);
 }
 
+- (void)testQueens {
+    cal8Queens(0);
+}
+
+- (void)testKnapsack {
+    int weight[] = {2, 2, 4, 6, 3};
+    int n = 5;
+    int w = 9;
+    int res = knapsack(weight, n, w);
+    NSLog(@"res : %d", res);
+}
+
+- (void)testKnapsack2 {
+    int weight[] = {2, 2, 4, 6, 3};
+    int n = 5;
+    int w = 9;
+    int res = knapsack2(weight, n, w);
+    NSLog(@"res : %d", res);
+}
+
+- (void)testSwap {
+    swapTest();
+}
+
+- (void)testBag {
+    int items[] = {10, 22, 33, 55, 2, 33, 78, 23, 90, 30};
+    bag(0, 0, items, 10, 100);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
