@@ -129,6 +129,7 @@ int knapsack(int weight[], int n, int w) {
             states[i][j] = NO;
         }
     }
+    //第一行的数据要特殊处理
     states[0][0] = YES;
     states[0][weight[0]] = YES;
     for (int i = 1; i < n; i++) {
@@ -152,8 +153,35 @@ int knapsack(int weight[], int n, int w) {
             return i;
         }
     }
-    return 1;
+    return 0;
 }
+
+int bagDP(int weight[], int n, int w) {
+    BOOL states[n][w+1];
+    states[0][0] = YES;
+    states[0][weight[0]] = YES;
+    for (int i = 1; i < n; ++i) {
+        //本行不放
+        for (int j = 0; j <= w; ++j) {
+            if (states[i-1][j] == YES) {
+                states[i][j] = states[i-1][j];
+            }
+        }
+        int tempWeight = weight[i];
+        for (int j = 0; j <= w - tempWeight; ++j) {
+            if (states[i-1][j] == YES) {
+                states[i][j + tempWeight] = YES;
+            }
+        }
+    }
+    for (int i = w; i >= 0; i--) {
+        if (states[n-1][i] == YES) {
+            return i;
+        }
+    }
+    return 0;
+}
+
 
 int knapsack2(int weight[], int n, int w) {
     BOOL *states = malloc(sizeof(BOOL) * (w + 1));
@@ -173,9 +201,35 @@ int knapsack2(int weight[], int n, int w) {
             return i;
         }
     }
-    return 1;
+    return 0;
 }
 
+//2, 2, 4, 6, 3
+int bagDP2(int weight[], int n, int w) {
+    BOOL states[w+1];
+    for (int i = 0; i <= w; i++) {
+        states[i] = NO;
+    }
+    states[0] = YES;
+    int tempWeight = weight[0];
+    states[tempWeight] = YES;
+    for (int i = 1; i < n; i++) {
+        tempWeight = weight[i];
+        for (int j = w - tempWeight; j >= 0; j--) {
+            if (states[j] == YES) {
+                states[j + tempWeight] = YES;
+            }
+        }
+    }
+    for (int i = w; i >= 0; i--) {
+        if (states[i]) {
+            return i;
+        }
+    }
+    return 0;
+}
+
+//重量加价值
 int knapsack3(int weight[], int value[], int n, int w) {
     int **states = malloc(sizeof(int *) * n);
     for (int i = 0; i < n; i++) {
@@ -202,6 +256,7 @@ int knapsack3(int weight[], int value[], int n, int w) {
                 int v = states[i-1][j] + value[i];
                 if (v > states[i][j + weight[i]]) {
                     states[i][j + weight[i]] = v;
+                    NSLog(@"put in %d", weight[i]);
                 }
             }
         }
@@ -214,6 +269,45 @@ int knapsack3(int weight[], int value[], int n, int w) {
     }
     return maxValue;
 }
+
+int bagDPValue(int weight[], int value[], int n, int maxW) {
+    int states[n][maxW+1];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= maxW; j++) {
+            states[i][j] = -1;
+        }
+    }
+    //第一个物品单独处理
+    states[0][0] = 0;
+    states[0][weight[0]] = value[0];
+    for (int i = 1; i < n; i++) {
+        //第i个不放
+        for (int j = 0; j <= maxW; j++) {
+            if (states[i-1][j] > 0) {
+                states[i][j] = states[i-1][j];
+            }
+        }
+        //第i个放入
+        int tempWeight = weight[i];
+        for (int j = 0; j <= maxW - tempWeight; j++) {
+            if (states[i-1][j] > 0) {
+                int tempV = states[i-1][j] + value[i];
+                //states[i][j + weight[i]表示什么？
+                if (tempV > states[i][j + weight[i]]) {
+                    states[i][j + weight[i]] = tempV;
+                }
+            }
+        }
+    }
+    int maxValue = -1;
+    for (int i = 0; i <= maxW; i++) {
+        if (states[n-1][i] > maxValue) {
+            maxValue = states[n-1][i];
+        }
+    }
+    return maxValue;
+}
+
 
 void swapTest() {
     int x = 1;

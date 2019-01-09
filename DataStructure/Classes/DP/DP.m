@@ -18,6 +18,7 @@ int aLen = 6;
 int bLen = 6;
 int minDist = 100000;
 
+#pragma mark - 编辑距离
 
 //回溯
 void lwstBT(int i, int j, int edist) {
@@ -96,6 +97,33 @@ int lwstDP(char *strA, int aLen, char *strB, int bLen) {
     return tempMin;
 }
 
+//程序员的数学基础课上的思路
+int lwstDPTest(char *strA, int aLen, char *strB, int bLen) {
+    int minDist[aLen+1][bLen+1];
+    for (int j = 0; j <= bLen; j++) {
+        minDist[0][j] = j;
+    }
+    for (int i = 0; i <= aLen; i++) {
+         minDist[i][0] = i;
+    }
+    for (int i = 0; i < aLen; i++) {
+        for (int j = 0; j < bLen; j++) {
+            int r = 0;
+            if (strA[i] != strB[j]) {
+                r = 1;
+            }
+            int firstAppend = minDist[i][j+1] + 1;
+            int secondAppend = minDist[i+1][j] + 1;
+            int replace = minDist[i][j] + r;
+            minDist[i+1][j+1] = min(firstAppend, secondAppend, replace);
+        }
+    }
+    int tempMin = minDist[aLen][bLen];
+    NSLog(@"******* minDist : %d *******", tempMin);
+    return tempMin;
+}
+
+#pragma mark - 最长公共子串
 
 int max(int x, int y, int z) {
     int max = INT_MIN;
@@ -145,6 +173,7 @@ int lcsDP(char *strA, int aLen, char *strB, int bLen) {
     return tempMax;
 }
 
+#pragma mark - 矩阵最短路径
 
 //矩阵最短路径，回溯
 int matrix_min_dist = 10000;
@@ -210,6 +239,38 @@ int minDistForMatrixDP(int i, int j) {
     mem[i][j] = curMinDist;
     NSLog(@"min dist : %d", curMinDist);
     return curMinDist;
+}
+
+
+int level = 5;
+int triangle[5][5] = {{5}, {7,8}, {2,3,4}, {4,9,6,1}, {2,7,9,4,5}};
+int path[5][5];
+
+int trianglePath() {
+    //第一个特殊处理
+    path[0][0] = triangle[0][0];
+    //第一列
+    for (int i = 1; i < level; i++) {
+        path[i][0] = path[i-1][0] + triangle[i][0];
+    }
+    //最后一列
+    for (int j = 1; j < level; j++) {
+        path[j][j] = path[j-1][j-1] + triangle[j][j];
+    }
+    //中间元素的处理
+    for (int i = 2; i < level; i++) {
+        for (int j = 1; j < i; j++) {
+            path[i][j] = MIN(path[i-1][j-1], path[i-1][j]) + triangle[i][j];
+        }
+    }
+    int minPath = INT_MAX;
+    for (int i = 0; i < level; i++) {
+        if (minPath > path[level-1][i]) {
+            minPath = path[level-1][i];
+        }
+    }
+    NSLog(@"min path : %d", minPath);
+    return minPath;
 }
 
 

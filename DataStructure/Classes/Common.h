@@ -21,5 +21,8 @@ void cal8Queens(int row);
 
 int knapsack(int weight[], int n, int w);
 int knapsack2(int weight[], int n, int w);
+int bagDP(int weight[], int n, int w);
+int bagDP2(int weight[], int n, int w);
+int knapsack3(int weight[], int value[], int n, int w);
 
 void swapTest();

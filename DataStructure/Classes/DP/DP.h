@@ -24,3 +24,7 @@ void minDistBT(int i, int j, int dist, int matrix[5][5], int n);
 int minDistDP(int matrix[4][4], int len);
 
 int minDistForMatrixDP(int i, int j);
+
+int lwstDPTest(char *strA, int aLen, char *strB, int bLen);
+
+int trianglePath();

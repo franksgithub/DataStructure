@@ -29,7 +29,7 @@ void heapify(int a[], int length, int i) {
 
 @interface HeapSort() {
     int *array;
-    int capicity;
+    int _capicity;
     int count;
 }
 
@@ -41,14 +41,14 @@ void heapify(int a[], int length, int i) {
     self = [super init];
     if (self) {
         array = malloc(sizeof(int) * (capicity + 1));
-        capicity = capicity;
+        _capicity = capicity;
         count = 0;
     }
     return self;
 }
 
 - (void)insertData:(int)data {
-    if (count >= capicity) {
+    if (count >= _capicity) {
         return;
     }
     ++count;
@@ -60,7 +60,7 @@ void heapify(int a[], int length, int i) {
     }
 }
 
-- (int)removeMax {
+- (int)removeTop {
     if (count == 0) {
         return -1;
     }
@@ -70,7 +70,6 @@ void heapify(int a[], int length, int i) {
     heapify(array, count, 1);
     return removedData;
 }
-
 
 @end
 

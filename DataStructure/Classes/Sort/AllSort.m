@@ -95,6 +95,16 @@ void merge_sort_c(int a[], int start, int end) {
     merge(a, start, mid, end);
 }
 
+void merge_sort_test(int array[], int start, int end) {
+    if (array == NULL || start >= end) {
+        return;
+    }
+    int mid = (start + end) / 2;
+    merge_sort_test(array, start, mid);
+    merge_sort_test(array, mid + 1, end);
+    
+}
+
 void merge(int a[], int start, int mid, int end) {
     int i = start, j = mid + 1, k = 0;
     int tmp[end - start + 1];
@@ -118,6 +128,29 @@ void merge(int a[], int start, int mid, int end) {
     //合并后拷贝回原数组
     for (int i = 0; i <= (end - start); i++) {
         a[start + i] = tmp[i];
+    }
+}
+
+void merge_test(int array[], int start, int mid, int end) {
+    int i = start, j = mid + 1, k = 0;
+    int tmp[end - start + 1];
+    while (i <= mid && j <= end) {
+        if (array[i] <= array[j]) {
+            tmp[k++] = array[i++];
+        } else {
+            tmp[k++] = array[j++];
+        }
+    }
+    int begin = i, stop = mid;
+    if (j <= end) {
+        begin = j;
+        stop = end;
+    }
+    while (begin <= end) {
+        tmp[k++] = array[begin++];
+    }
+    for (int i = 0; i <= (end - start); i++) {
+        array[start + i] = tmp[i];
     }
 }
 

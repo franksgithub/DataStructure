@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Graph.h"
+#import "SortGraph.h"
 
 @interface GraphTests : XCTestCase
 
@@ -48,7 +49,28 @@
     [g addEdgeWithVertexA:6 vertexB:3];
     [g addEdgeWithVertexA:6 vertexB:8];
     [g addEdgeWithVertexA:8 vertexB:7];
-    [g dfsWithStart:1 target:7];
+    [g dfsWithStart:1 target:4];
+}
+
+- (void)testSortGraph_Kahn {
+    SortGraph *g = [[SortGraph alloc] initWithVertexCount:10];
+    [g addEdgeWithVertexA:1 vertexB:2];
+    [g addEdgeWithVertexA:1 vertexB:3];
+    [g addEdgeWithVertexA:2 vertexB:4];
+    [g addEdgeWithVertexA:4 vertexB:5];
+    [g addEdgeWithVertexA:5 vertexB:6];
+    [g topoSortByKahn];
+}
+
+- (void)testSortGraph_DFS {
+    SortGraph *g = [[SortGraph alloc] initWithVertexCount:6];
+    [g addEdgeWithVertexA:0 vertexB:1];
+    [g addEdgeWithVertexA:1 vertexB:2];
+    [g addEdgeWithVertexA:2 vertexB:3];
+    [g addEdgeWithVertexA:3 vertexB:4];
+    [g addEdgeWithVertexA:4 vertexB:5];
+//    [g addEdgeWithVertexA:5 vertexB:6];
+    [g topoSortByDFS];
 }
 
 - (void)testExample {

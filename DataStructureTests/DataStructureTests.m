@@ -11,6 +11,7 @@
 #import "LinkListQueue.h"
 #import "CircleQueue.h"
 #import "SingleLinkedList.h"
+#import "TwoStackQueue.h"
 
 @interface DataStructureTests : XCTestCase
 
@@ -194,6 +195,22 @@
     
 }
 
+- (void)testTwoStackQueue {
+    TwoStackQueue *queue = [[TwoStackQueue alloc] initWithCapacity:10];
+    [queue enqueue:1];
+    [queue enqueue:2];
+    [queue enqueue:3];
+    [queue enqueue:4];
+    [queue enqueue:5];
+    [queue enqueue:6];
+    int ele = [queue dequeue];
+    ele = [queue dequeue];
+    ele = [queue dequeue];
+    ele = [queue dequeue];
+    ele = [queue dequeue];
+    ele = [queue dequeue];
+    NSLog(@" ele : %d", ele);
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

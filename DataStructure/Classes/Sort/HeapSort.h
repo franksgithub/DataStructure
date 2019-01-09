@@ -16,6 +16,12 @@ void buildHeap(int a[], int length);
 
 @interface HeapSort : NSObject
 
+- (instancetype)initWithCapicity:(int)capicity;
+
+- (void)insertData:(int)data;
+
+- (int)removeTop;
+
 @end
 
 NS_ASSUME_NONNULL_END

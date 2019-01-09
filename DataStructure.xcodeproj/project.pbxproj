@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F70BB8A521B4BD03002FD205 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BB8A421B4BD03002FD205 /* Graph.m */; };
+		F7274B6121E59C2600133F25 /* DFSTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6021E59C2600133F25 /* DFSTreeNode.m */; };
+		F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6321E59DFE00133F25 /* DFSTree.m */; };
+		F7274B6621E5A07A00133F25 /* DFSTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6521E5A07A00133F25 /* DFSTreeTest.m */; };
 		F746692421C3916700B105A6 /* ACMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = F746692221C3916700B105A6 /* ACMachine.m */; };
 		F74CDAD6217440830078222F /* AllSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD5217440830078222F /* AllSort.m */; };
 		F74CDAD8217440D00078222F /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD7217440D00078222F /* SortTests.m */; };
 		F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */; };
 		F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = F75EFEFE21C0A5EF007A0DCF /* Trie.m */; };
+		F762DB9D21DF5A8000F75F8A /* SortGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = F762DB9C21DF5A8000F75F8A /* SortGraph.m */; };
+		F762DB9E21DF5A8000F75F8A /* SortGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = F762DB9C21DF5A8000F75F8A /* SortGraph.m */; };
 		F769BA8B21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
 		F769BA8C21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
 		F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8D21DC6BB800801BF3 /* DPTests.m */; };
@@ -36,6 +41,11 @@
 		F7A7A4C6216EEB49007E86C5 /* DataStructureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4C5216EEB49007E86C5 /* DataStructureTests.m */; };
 		F7A7A4D1216EEB49007E86C5 /* DataStructureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4D0216EEB49007E86C5 /* DataStructureUITests.m */; };
 		F7AADC81219AD48B006EAA5B /* LinkListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AADC80219AD48B006EAA5B /* LinkListTests.m */; };
+		F7BC88C621E2E60A00745EDE /* DijkstraGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88C521E2E60A00745EDE /* DijkstraGraph.m */; };
+		F7BC88D521E2FE8D00745EDE /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88D421E2FE8D00745EDE /* Heap.m */; };
+		F7BC88D721E32DF400745EDE /* DijkstraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88D621E32DF400745EDE /* DijkstraTest.m */; };
+		F7BC88DE21E3490A00745EDE /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88DD21E3490A00745EDE /* Stack.m */; };
+		F7BC88E121E34BF300745EDE /* TwoStackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88E021E34BF300745EDE /* TwoStackQueue.m */; };
 		F7F0852321991A4C000096F4 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F0852221991A4C000096F4 /* BinaryTree.m */; };
 		F7F0852821991DA4000096F4 /* BinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F0852721991DA4000096F4 /* BinaryTreeTest.m */; };
 		F7FCC33821AC22F000C33EA7 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FCC33721AC22F000C33EA7 /* HeapSort.m */; };
@@ -61,6 +71,11 @@
 /* Begin PBXFileReference section */
 		F70BB8A321B4BD03002FD205 /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		F70BB8A421B4BD03002FD205 /* Graph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		F7274B5F21E59C2600133F25 /* DFSTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSTreeNode.h; sourceTree = "<group>"; };
+		F7274B6021E59C2600133F25 /* DFSTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTreeNode.m; sourceTree = "<group>"; };
+		F7274B6221E59DFE00133F25 /* DFSTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSTree.h; sourceTree = "<group>"; };
+		F7274B6321E59DFE00133F25 /* DFSTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTree.m; sourceTree = "<group>"; };
+		F7274B6521E5A07A00133F25 /* DFSTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTreeTest.m; sourceTree = "<group>"; };
 		F746692221C3916700B105A6 /* ACMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMachine.m; sourceTree = "<group>"; };
 		F746692321C3916700B105A6 /* ACMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMachine.h; sourceTree = "<group>"; };
 		F74CDAD4217440830078222F /* AllSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSort.h; sourceTree = "<group>"; };
@@ -69,6 +84,8 @@
 		F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphTests.m; sourceTree = "<group>"; };
 		F75EFEFD21C0A5EF007A0DCF /* Trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
 		F75EFEFE21C0A5EF007A0DCF /* Trie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trie.m; sourceTree = "<group>"; };
+		F762DB9B21DF5A8000F75F8A /* SortGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortGraph.h; sourceTree = "<group>"; };
+		F762DB9C21DF5A8000F75F8A /* SortGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortGraph.m; sourceTree = "<group>"; };
 		F769BA8921DC68F900801BF3 /* DP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DP.h; sourceTree = "<group>"; };
 		F769BA8A21DC68F900801BF3 /* DP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DP.m; sourceTree = "<group>"; };
 		F769BA8D21DC6BB800801BF3 /* DPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPTests.m; sourceTree = "<group>"; };
@@ -107,6 +124,15 @@
 		F7A7A4D0216EEB49007E86C5 /* DataStructureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataStructureUITests.m; sourceTree = "<group>"; };
 		F7A7A4D2216EEB49007E86C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AADC80219AD48B006EAA5B /* LinkListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkListTests.m; sourceTree = "<group>"; };
+		F7BC88C421E2E60A00745EDE /* DijkstraGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DijkstraGraph.h; sourceTree = "<group>"; };
+		F7BC88C521E2E60A00745EDE /* DijkstraGraph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DijkstraGraph.m; sourceTree = "<group>"; };
+		F7BC88D321E2FE8D00745EDE /* Heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		F7BC88D421E2FE8D00745EDE /* Heap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
+		F7BC88D621E32DF400745EDE /* DijkstraTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DijkstraTest.m; sourceTree = "<group>"; };
+		F7BC88DC21E3490A00745EDE /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		F7BC88DD21E3490A00745EDE /* Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		F7BC88DF21E34BF300745EDE /* TwoStackQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoStackQueue.h; sourceTree = "<group>"; };
+		F7BC88E021E34BF300745EDE /* TwoStackQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoStackQueue.m; sourceTree = "<group>"; };
 		F7F0852121991A4C000096F4 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		F7F0852221991A4C000096F4 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		F7F0852721991DA4000096F4 /* BinaryTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeTest.m; sourceTree = "<group>"; };
@@ -142,10 +168,27 @@
 		F70BB8A221B4BCF1002FD205 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				F762DB9B21DF5A8000F75F8A /* SortGraph.h */,
+				F762DB9C21DF5A8000F75F8A /* SortGraph.m */,
 				F70BB8A321B4BD03002FD205 /* Graph.h */,
 				F70BB8A421B4BD03002FD205 /* Graph.m */,
+				F7BC88C421E2E60A00745EDE /* DijkstraGraph.h */,
+				F7BC88C521E2E60A00745EDE /* DijkstraGraph.m */,
+				F7BC88D321E2FE8D00745EDE /* Heap.h */,
+				F7BC88D421E2FE8D00745EDE /* Heap.m */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		F7274B5E21E59C0600133F25 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				F7274B5F21E59C2600133F25 /* DFSTreeNode.h */,
+				F7274B6021E59C2600133F25 /* DFSTreeNode.m */,
+				F7274B6221E59DFE00133F25 /* DFSTree.h */,
+				F7274B6321E59DFE00133F25 /* DFSTree.m */,
+			);
+			path = Tree;
 			sourceTree = "<group>";
 		};
 		F74CDAD3217440830078222F /* Sort */ = {
@@ -193,6 +236,8 @@
 		F783EB6921801016000DB897 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				F7274B5E21E59C0600133F25 /* Tree */,
+				F7BC88D821E3478000745EDE /* Stack */,
 				F7F0852021991A35000096F4 /* BinaryTree */,
 				F783EB6A21801016000DB897 /* ArrayQueue.h */,
 				F783EB6B21801016000DB897 /* ArrayQueue.m */,
@@ -273,6 +318,8 @@
 				F77E1D3121B7657B009F919D /* StringTests.m */,
 				F77E1D5D21B7D4AB009F919D /* CommonTest.m */,
 				F769BA8D21DC6BB800801BF3 /* DPTests.m */,
+				F7BC88D621E32DF400745EDE /* DijkstraTest.m */,
+				F7274B6521E5A07A00133F25 /* DFSTreeTest.m */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -299,6 +346,17 @@
 				F77E1D5B21B7CD90009F919D /* Common.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		F7BC88D821E3478000745EDE /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC88DC21E3490A00745EDE /* Stack.h */,
+				F7BC88DD21E3490A00745EDE /* Stack.m */,
+				F7BC88DF21E34BF300745EDE /* TwoStackQueue.h */,
+				F7BC88E021E34BF300745EDE /* TwoStackQueue.m */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 		F7F0852021991A35000096F4 /* BinaryTree */ = {
@@ -449,14 +507,21 @@
 				F7FCC33821AC22F000C33EA7 /* HeapSort.m in Sources */,
 				F77E1D5C21B7CD90009F919D /* Common.m in Sources */,
 				F783EB7621801016000DB897 /* LinkListQueue.m in Sources */,
+				F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */,
 				F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */,
+				F7BC88C621E2E60A00745EDE /* DijkstraGraph.m in Sources */,
 				F7A7A4AE216EEB47007E86C5 /* AppDelegate.m in Sources */,
 				F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */,
 				F783EB7421801016000DB897 /* CircleQueue.m in Sources */,
 				F783EB5F21800380000DB897 /* AllSearch.m in Sources */,
+				F7BC88DE21E3490A00745EDE /* Stack.m in Sources */,
+				F7BC88D521E2FE8D00745EDE /* Heap.m in Sources */,
+				F7BC88E121E34BF300745EDE /* TwoStackQueue.m in Sources */,
 				F74CDAD6217440830078222F /* AllSort.m in Sources */,
 				F783EB7321801016000DB897 /* ArrayQueue.m in Sources */,
+				F762DB9D21DF5A8000F75F8A /* SortGraph.m in Sources */,
 				F746692421C3916700B105A6 /* ACMachine.m in Sources */,
+				F7274B6121E59C2600133F25 /* DFSTreeNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,9 +533,12 @@
 				F7AADC81219AD48B006EAA5B /* LinkListTests.m in Sources */,
 				F77E1D3221B7657B009F919D /* StringTests.m in Sources */,
 				F7A7A4C6216EEB49007E86C5 /* DataStructureTests.m in Sources */,
+				F762DB9E21DF5A8000F75F8A /* SortGraph.m in Sources */,
 				F74CDAD8217440D00078222F /* SortTests.m in Sources */,
 				F769BA8C21DC68F900801BF3 /* DP.m in Sources */,
+				F7274B6621E5A07A00133F25 /* DFSTreeTest.m in Sources */,
 				F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */,
+				F7BC88D721E32DF400745EDE /* DijkstraTest.m in Sources */,
 				F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */,
 				F77E1D5E21B7D4AB009F919D /* CommonTest.m in Sources */,
 				F783EB6821800BC5000DB897 /* SearchTests.m in Sources */,

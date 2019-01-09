@@ -28,9 +28,15 @@
 }
 
 - (void)testLwstDP {
-    char *strA = "h3leoworldf";
-    char *strB = "helloworrdd";
+    char *strA = "helloworld";
+    char *strB = "ahlloworld";
     lwstDP(strA, 10, strB, 10);
+}
+
+- (void)testLwstDPTest {
+    char *strA = "helloworld";
+    char *strB = "aelloworld";
+    lwstDPTest(strA, 10, strB, 10);
 }
 
 - (void)testLcsDP {
@@ -57,6 +63,10 @@
 
 - (void)testMinDistForMatrix {
     minDistForMatrixDP(3, 3);
+}
+
+- (void)testTrianglePath {
+    trianglePath();
 }
 
 @end

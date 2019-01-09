@@ -38,7 +38,10 @@
     int n = 5;
     int w = 9;
     int res = knapsack(weight, n, w);
-    NSLog(@"res : %d", res);
+    NSLog(@"*****1 res : %d *****", res);
+    res = bagDP(weight, n, w);
+    NSLog(@"*****2 res : %d *****", res);
+    
 }
 
 - (void)testKnapsack2 {
@@ -46,6 +49,17 @@
     int n = 5;
     int w = 9;
     int res = knapsack2(weight, n, w);
+    NSLog(@"res : %d", res);
+    res = bagDP2(weight, n, w);
+    NSLog(@"res : %d", res);
+}
+
+- (void)testKnapsack3 {
+    int weight[] = {2, 2, 4, 6, 3};
+    int value[] = {3,4,8,9,6};
+    int n = 5;
+    int w = 9;
+    int res = knapsack3(weight, value, n, w);
     NSLog(@"res : %d", res);
 }
 
