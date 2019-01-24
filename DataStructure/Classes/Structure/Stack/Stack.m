@@ -28,6 +28,10 @@
     return self;
 }
 
+- (void)dealloc {
+    free(items);
+}
+
 - (void)push:(int)ele {
     if (numOfEle == _capacity) {
         NSLog(@"stack is full");

@@ -7,26 +7,64 @@
 //
 
 #import "DFSTree.h"
+#import "SimpleStack.h"
+
+@interface DFSTree()
+
+@property (nonatomic, strong) DFSTreeNode *rootNode;
+
+@end
 
 @implementation DFSTree
 
-+ (void)dfsByStackWithTreeNode:(DFSTreeNode *)treeNode {
-    NSMutableArray<DFSTreeNode *> *stack = [NSMutableArray array];
-    [stack addObject:treeNode];
-    while (stack.count > 0) {
-        DFSTreeNode *node = [stack lastObject];
-        [stack removeLastObject];
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _rootNode = [[DFSTreeNode alloc] initWithLabel:' ' prefix:@" " exp:nil];
+    }
+    return self;
+}
+
+- (void)dfsByStack {
+    SimpleStack<DFSTreeNode *> *stack = [SimpleStack stack];
+    [stack push:_rootNode];
+    //数据存储在服务器端，也是时间换空间的一种表现
+    //iOS设备始终使用又缓存，并开启垂直同步
+    /*
+     
+     */
+    while (![stack isEmpty]) {
+        DFSTreeNode *node = [stack pop];
         if (node.sons.count == 0) {
-            NSLog(@"********************%@%c********************", node.prefix, node.label);
+            NSLog(@"********************%@%c  ********************", node.prefix, node.label);
         } else {
-            NSMutableArray<DFSTreeNode *> *tempStack = [NSMutableArray array];
+            SimpleStack<DFSTreeNode *> *tempStack = [SimpleStack stack];
             [node.sons enumerateKeysAndObjectsUsingBlock:^(NSString *key, DFSTreeNode *obj, BOOL *stop) {
-                [tempStack addObject:obj];
+                [tempStack push:obj];
             }];
-            while (tempStack.count > 0) {
-                [stack addObject:[tempStack lastObject]];
-                [tempStack removeLastObject];
+            //逆序
+            while (![tempStack isEmpty]) {
+                [stack push:[tempStack pop]];
             }
+        }
+    }
+}
+
+- (void)buildTreeWithCString:(char *)cStr {
+    if (!cStr) {
+        return;
+    }
+    DFSTreeNode *parentNode = _rootNode;
+    while (*cStr != '\0') {
+        @autoreleasepool {
+            NSString *son = [NSString stringWithFormat:@"%c", *cStr];
+            if (!parentNode.sons[son]) {
+                NSString *prefix = [NSString stringWithFormat:@"%@%c", parentNode.prefix, parentNode.label];
+                DFSTreeNode *node = [[DFSTreeNode alloc] initWithLabel:*cStr prefix:prefix exp:nil];
+                [parentNode.sons setValue:node forKey:son];
+            }
+            parentNode = parentNode.sons[son];
+            cStr++;
         }
     }
 }

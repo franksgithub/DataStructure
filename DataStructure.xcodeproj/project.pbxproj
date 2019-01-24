@@ -11,7 +11,13 @@
 		F7274B6121E59C2600133F25 /* DFSTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6021E59C2600133F25 /* DFSTreeNode.m */; };
 		F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6321E59DFE00133F25 /* DFSTree.m */; };
 		F7274B6621E5A07A00133F25 /* DFSTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6521E5A07A00133F25 /* DFSTreeTest.m */; };
+		F7274B7E21E5DD2300133F25 /* BitMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B7D21E5DD2300133F25 /* BitMap.m */; };
+		F7274B8021E5E13F00133F25 /* BitMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B7F21E5E13F00133F25 /* BitMapTest.m */; };
 		F746692421C3916700B105A6 /* ACMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = F746692221C3916700B105A6 /* ACMachine.m */; };
+		F748E35C21E87CDF00C2DC4E /* SimpleQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F748E35B21E87CDF00C2DC4E /* SimpleQueue.m */; };
+		F748E36421E88CD900C2DC4E /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F748E35F21E88CD900C2DC4E /* ArrayQueue.m */; };
+		F748E36521E88CD900C2DC4E /* CircleQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F748E36121E88CD900C2DC4E /* CircleQueue.m */; };
+		F748E36621E88CD900C2DC4E /* LinkListQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F748E36321E88CD900C2DC4E /* LinkListQueue.m */; };
 		F74CDAD6217440830078222F /* AllSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD5217440830078222F /* AllSort.m */; };
 		F74CDAD8217440D00078222F /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD7217440D00078222F /* SortTests.m */; };
 		F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */; };
@@ -21,16 +27,14 @@
 		F769BA8B21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
 		F769BA8C21DC68F900801BF3 /* DP.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8A21DC68F900801BF3 /* DP.m */; };
 		F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F769BA8D21DC6BB800801BF3 /* DPTests.m */; };
+		F77CA02521E6EAF10027D362 /* SimpleStack.m in Sources */ = {isa = PBXBuildFile; fileRef = F77CA02421E6EAF10027D362 /* SimpleStack.m */; };
 		F77E1D3021B76510009F919D /* StringMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D2F21B76510009F919D /* StringMatch.m */; };
 		F77E1D3221B7657B009F919D /* StringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D3121B7657B009F919D /* StringTests.m */; };
 		F77E1D5C21B7CD90009F919D /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D5B21B7CD90009F919D /* Common.m */; };
 		F77E1D5E21B7D4AB009F919D /* CommonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77E1D5D21B7D4AB009F919D /* CommonTest.m */; };
 		F783EB5F21800380000DB897 /* AllSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB5E21800380000DB897 /* AllSearch.m */; };
 		F783EB6821800BC5000DB897 /* SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB6721800BC5000DB897 /* SearchTests.m */; };
-		F783EB7321801016000DB897 /* ArrayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB6B21801016000DB897 /* ArrayQueue.m */; };
-		F783EB7421801016000DB897 /* CircleQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB6D21801016000DB897 /* CircleQueue.m */; };
 		F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB7021801016000DB897 /* SingleLinkedList.m */; };
-		F783EB7621801016000DB897 /* LinkListQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB7221801016000DB897 /* LinkListQueue.m */; };
 		F7840A0721B6251600A4BB1B /* HeapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7840A0621B6251600A4BB1B /* HeapTests.m */; };
 		F7A7A4AE216EEB47007E86C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4AD216EEB47007E86C5 /* AppDelegate.m */; };
 		F7A7A4B1216EEB47007E86C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4B0216EEB47007E86C5 /* ViewController.m */; };
@@ -76,8 +80,19 @@
 		F7274B6221E59DFE00133F25 /* DFSTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSTree.h; sourceTree = "<group>"; };
 		F7274B6321E59DFE00133F25 /* DFSTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTree.m; sourceTree = "<group>"; };
 		F7274B6521E5A07A00133F25 /* DFSTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTreeTest.m; sourceTree = "<group>"; };
+		F7274B7C21E5DD2300133F25 /* BitMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitMap.h; sourceTree = "<group>"; };
+		F7274B7D21E5DD2300133F25 /* BitMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitMap.m; sourceTree = "<group>"; };
+		F7274B7F21E5E13F00133F25 /* BitMapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitMapTest.m; sourceTree = "<group>"; };
 		F746692221C3916700B105A6 /* ACMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMachine.m; sourceTree = "<group>"; };
 		F746692321C3916700B105A6 /* ACMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMachine.h; sourceTree = "<group>"; };
+		F748E35A21E87CDF00C2DC4E /* SimpleQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleQueue.h; sourceTree = "<group>"; };
+		F748E35B21E87CDF00C2DC4E /* SimpleQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleQueue.m; sourceTree = "<group>"; };
+		F748E35E21E88CD900C2DC4E /* ArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
+		F748E35F21E88CD900C2DC4E /* ArrayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayQueue.m; sourceTree = "<group>"; };
+		F748E36021E88CD900C2DC4E /* CircleQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleQueue.h; sourceTree = "<group>"; };
+		F748E36121E88CD900C2DC4E /* CircleQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleQueue.m; sourceTree = "<group>"; };
+		F748E36221E88CD900C2DC4E /* LinkListQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkListQueue.h; sourceTree = "<group>"; };
+		F748E36321E88CD900C2DC4E /* LinkListQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkListQueue.m; sourceTree = "<group>"; };
 		F74CDAD4217440830078222F /* AllSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSort.h; sourceTree = "<group>"; };
 		F74CDAD5217440830078222F /* AllSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSort.m; sourceTree = "<group>"; };
 		F74CDAD7217440D00078222F /* SortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTests.m; sourceTree = "<group>"; };
@@ -89,6 +104,8 @@
 		F769BA8921DC68F900801BF3 /* DP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DP.h; sourceTree = "<group>"; };
 		F769BA8A21DC68F900801BF3 /* DP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DP.m; sourceTree = "<group>"; };
 		F769BA8D21DC6BB800801BF3 /* DPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPTests.m; sourceTree = "<group>"; };
+		F77CA02321E6EAF10027D362 /* SimpleStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleStack.h; sourceTree = "<group>"; };
+		F77CA02421E6EAF10027D362 /* SimpleStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleStack.m; sourceTree = "<group>"; };
 		F77E1D2E21B76510009F919D /* StringMatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringMatch.h; sourceTree = "<group>"; };
 		F77E1D2F21B76510009F919D /* StringMatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringMatch.m; sourceTree = "<group>"; };
 		F77E1D3121B7657B009F919D /* StringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringTests.m; sourceTree = "<group>"; };
@@ -98,14 +115,8 @@
 		F783EB5D21800380000DB897 /* AllSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllSearch.h; sourceTree = "<group>"; };
 		F783EB5E21800380000DB897 /* AllSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllSearch.m; sourceTree = "<group>"; };
 		F783EB6721800BC5000DB897 /* SearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTests.m; sourceTree = "<group>"; };
-		F783EB6A21801016000DB897 /* ArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
-		F783EB6B21801016000DB897 /* ArrayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayQueue.m; sourceTree = "<group>"; };
-		F783EB6C21801016000DB897 /* CircleQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleQueue.h; sourceTree = "<group>"; };
-		F783EB6D21801016000DB897 /* CircleQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleQueue.m; sourceTree = "<group>"; };
 		F783EB6F21801016000DB897 /* SingleLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLinkedList.h; sourceTree = "<group>"; };
 		F783EB7021801016000DB897 /* SingleLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLinkedList.m; sourceTree = "<group>"; };
-		F783EB7121801016000DB897 /* LinkListQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkListQueue.h; sourceTree = "<group>"; };
-		F783EB7221801016000DB897 /* LinkListQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkListQueue.m; sourceTree = "<group>"; };
 		F7840A0621B6251600A4BB1B /* HeapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapTests.m; sourceTree = "<group>"; };
 		F7A7A4A9216EEB47007E86C5 /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A7A4AC216EEB47007E86C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -191,6 +202,28 @@
 			path = Tree;
 			sourceTree = "<group>";
 		};
+		F7274B7B21E5DD1500133F25 /* BitMap */ = {
+			isa = PBXGroup;
+			children = (
+				F7274B7C21E5DD2300133F25 /* BitMap.h */,
+				F7274B7D21E5DD2300133F25 /* BitMap.m */,
+			);
+			path = BitMap;
+			sourceTree = "<group>";
+		};
+		F748E35D21E88CD900C2DC4E /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				F748E35E21E88CD900C2DC4E /* ArrayQueue.h */,
+				F748E35F21E88CD900C2DC4E /* ArrayQueue.m */,
+				F748E36021E88CD900C2DC4E /* CircleQueue.h */,
+				F748E36121E88CD900C2DC4E /* CircleQueue.m */,
+				F748E36221E88CD900C2DC4E /* LinkListQueue.h */,
+				F748E36321E88CD900C2DC4E /* LinkListQueue.m */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
 		F74CDAD3217440830078222F /* Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,16 +269,12 @@
 		F783EB6921801016000DB897 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				F748E35D21E88CD900C2DC4E /* Queue */,
+				F7274B7B21E5DD1500133F25 /* BitMap */,
 				F7274B5E21E59C0600133F25 /* Tree */,
 				F7BC88D821E3478000745EDE /* Stack */,
 				F7F0852021991A35000096F4 /* BinaryTree */,
-				F783EB6A21801016000DB897 /* ArrayQueue.h */,
-				F783EB6B21801016000DB897 /* ArrayQueue.m */,
-				F783EB6C21801016000DB897 /* CircleQueue.h */,
-				F783EB6D21801016000DB897 /* CircleQueue.m */,
 				F783EB6E21801016000DB897 /* LinkedList */,
-				F783EB7121801016000DB897 /* LinkListQueue.h */,
-				F783EB7221801016000DB897 /* LinkListQueue.m */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -307,10 +336,10 @@
 		F7A7A4C4216EEB49007E86C5 /* DataStructureTests */ = {
 			isa = PBXGroup;
 			children = (
+				F7A7A4C7216EEB49007E86C5 /* Info.plist */,
 				F7A7A4C5216EEB49007E86C5 /* DataStructureTests.m */,
 				F74CDAD7217440D00078222F /* SortTests.m */,
 				F783EB6721800BC5000DB897 /* SearchTests.m */,
-				F7A7A4C7216EEB49007E86C5 /* Info.plist */,
 				F7F0852721991DA4000096F4 /* BinaryTreeTest.m */,
 				F7AADC80219AD48B006EAA5B /* LinkListTests.m */,
 				F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */,
@@ -320,6 +349,7 @@
 				F769BA8D21DC6BB800801BF3 /* DPTests.m */,
 				F7BC88D621E32DF400745EDE /* DijkstraTest.m */,
 				F7274B6521E5A07A00133F25 /* DFSTreeTest.m */,
+				F7274B7F21E5E13F00133F25 /* BitMapTest.m */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -355,6 +385,10 @@
 				F7BC88DD21E3490A00745EDE /* Stack.m */,
 				F7BC88DF21E34BF300745EDE /* TwoStackQueue.h */,
 				F7BC88E021E34BF300745EDE /* TwoStackQueue.m */,
+				F77CA02321E6EAF10027D362 /* SimpleStack.h */,
+				F77CA02421E6EAF10027D362 /* SimpleStack.m */,
+				F748E35A21E87CDF00C2DC4E /* SimpleQueue.h */,
+				F748E35B21E87CDF00C2DC4E /* SimpleQueue.m */,
 			);
 			path = Stack;
 			sourceTree = "<group>";
@@ -503,22 +537,25 @@
 				F7F0852321991A4C000096F4 /* BinaryTree.m in Sources */,
 				F7A7A4B1216EEB47007E86C5 /* ViewController.m in Sources */,
 				F7A7A4BC216EEB49007E86C5 /* main.m in Sources */,
+				F748E36521E88CD900C2DC4E /* CircleQueue.m in Sources */,
 				F77E1D3021B76510009F919D /* StringMatch.m in Sources */,
 				F7FCC33821AC22F000C33EA7 /* HeapSort.m in Sources */,
 				F77E1D5C21B7CD90009F919D /* Common.m in Sources */,
-				F783EB7621801016000DB897 /* LinkListQueue.m in Sources */,
+				F7274B7E21E5DD2300133F25 /* BitMap.m in Sources */,
 				F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */,
+				F748E35C21E87CDF00C2DC4E /* SimpleQueue.m in Sources */,
 				F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */,
 				F7BC88C621E2E60A00745EDE /* DijkstraGraph.m in Sources */,
 				F7A7A4AE216EEB47007E86C5 /* AppDelegate.m in Sources */,
 				F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */,
-				F783EB7421801016000DB897 /* CircleQueue.m in Sources */,
+				F77CA02521E6EAF10027D362 /* SimpleStack.m in Sources */,
 				F783EB5F21800380000DB897 /* AllSearch.m in Sources */,
+				F748E36421E88CD900C2DC4E /* ArrayQueue.m in Sources */,
 				F7BC88DE21E3490A00745EDE /* Stack.m in Sources */,
+				F748E36621E88CD900C2DC4E /* LinkListQueue.m in Sources */,
 				F7BC88D521E2FE8D00745EDE /* Heap.m in Sources */,
 				F7BC88E121E34BF300745EDE /* TwoStackQueue.m in Sources */,
 				F74CDAD6217440830078222F /* AllSort.m in Sources */,
-				F783EB7321801016000DB897 /* ArrayQueue.m in Sources */,
 				F762DB9D21DF5A8000F75F8A /* SortGraph.m in Sources */,
 				F746692421C3916700B105A6 /* ACMachine.m in Sources */,
 				F7274B6121E59C2600133F25 /* DFSTreeNode.m in Sources */,
@@ -532,6 +569,7 @@
 				F7F0852821991DA4000096F4 /* BinaryTreeTest.m in Sources */,
 				F7AADC81219AD48B006EAA5B /* LinkListTests.m in Sources */,
 				F77E1D3221B7657B009F919D /* StringTests.m in Sources */,
+				F7274B8021E5E13F00133F25 /* BitMapTest.m in Sources */,
 				F7A7A4C6216EEB49007E86C5 /* DataStructureTests.m in Sources */,
 				F762DB9E21DF5A8000F75F8A /* SortGraph.m in Sources */,
 				F74CDAD8217440D00078222F /* SortTests.m in Sources */,

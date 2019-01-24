@@ -273,6 +273,28 @@ int trianglePath() {
     return minPath;
 }
 
+int triangle_path() {
+    path[0][0] = triangle[0][0];
+    for (int i = 1; i < level; i++) {
+        path[i][0] = path[i-1][0] + triangle[i][0];
+    }
+    for (int j = 1; j < level; j++) {
+        path[0][j] = path[0][j-1] + triangle[0][j];
+    }
+    for (int i = 2; i < level; i++) {
+        for (int j = 2; j < i; j++) {
+            path[i][j] = MIN(path[i-1][j-1], path[i-1][j] + triangle[i][j]);
+        }
+    }
+    int minPath = INT_MAX;
+    for (int i = 0; i < level; i++) {
+        if (minPath > path[level-1][i]) {
+            minPath = path[level-1][i];
+        }
+    }
+    return minPath;
+}
+
 
 
 

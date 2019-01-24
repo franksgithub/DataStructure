@@ -38,6 +38,21 @@ int binarySearch_c(int a[], int startIndex, int endIndex, int searchValue) {
     return -1;
 }
 
+int binary_search_for(int array[], int low, int high, int target) {
+    while (low <= high) {
+        int middle = low + (high - low) / 2;
+        int middleValue = array[middle];
+        if (middleValue == target) {
+            return middle;
+        } else if (target < middleValue) {
+            high = middle - 1;
+        } else {
+            low = middle + 1;
+        }
+    }
+    return -1;
+}
+
 //递归实现
 int binarySearch_recursion(int a[], int low, int high, int searchValue) {
     if (low > high) {
@@ -54,6 +69,21 @@ int binarySearch_recursion(int a[], int low, int high, int searchValue) {
     }
 }
 
+int binary_search_recursion(int a[], int low, int high, int target) {
+    if (low > high) {
+        return -1;
+    }
+    int middle = low + (high - low) / 2;
+    int middleValue = a[middle];
+    if (middleValue == target) {
+        return middle;
+    } else if (target < middleValue) {
+        return binary_search_recursion(a, low, middle - 1, target);
+    } else {
+        return binary_search_recursion(a, middle + 1, high, target);
+    }
+}
+
 int binary_search_first_value(int a[], int currentIndex, int searchValue) {
     int tempIndex = currentIndex;
     while (tempIndex > 0) {
@@ -65,6 +95,28 @@ int binary_search_first_value(int a[], int currentIndex, int searchValue) {
     return currentIndex;
 }
 
+int binary_search_first(int array[], int curIndex, int target) {
+    int tempIndex = curIndex;
+    while (tempIndex > 0) {
+        tempIndex--;
+        if (array[tempIndex] < target) {
+            return tempIndex + 1;
+        }
+    }
+    return curIndex;
+}
+
+int binary_search_first_target(int array[], int curIndex, int target) {
+    int tempIdx = curIndex;
+    while (tempIdx > 0) {
+        tempIdx--;
+        if (array[tempIdx] < target) {
+            return tempIdx + 1;
+        }
+    }
+    return curIndex;
+}
+
 int binary_search_last_value(int a[], int length, int currentIndex, int searchValue) {
     int tempIndex = currentIndex;
     while (tempIndex < length) {
@@ -74,6 +126,17 @@ int binary_search_last_value(int a[], int length, int currentIndex, int searchVa
         }
     }
     return currentIndex;
+}
+
+int binary_search_last(int array[], int len, int curIndex, int target) {
+    int tempIndex = curIndex;
+    while (tempIndex < len) {
+        tempIndex++;
+        if (array[tempIndex] > target) {
+            return tempIndex - 1;
+        }
+    }
+    return curIndex;
 }
 
 int binary_search_first_bigger(int a[], int length, int searchValue) {

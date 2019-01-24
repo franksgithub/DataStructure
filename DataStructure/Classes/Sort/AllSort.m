@@ -261,7 +261,7 @@ void countingSort(int a[], int length) {
         counter[a[i]]++;
     }
     
-    //依次累加
+    //依次累加，累加完成之后，counter[i]中存储的是小于等待i的元素个数
     for (int i = 1; i < length; i++) {
         counter[i] = counter[i] + counter[i - 1];
     }

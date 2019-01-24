@@ -7,6 +7,7 @@
 //
 
 #import "Graph.h"
+#import "SimpleQueue.h"
 
 @interface Graph() {
     BOOL found;
@@ -45,15 +46,14 @@
         visited[i] = @(NO);
     }
     visited[start] = @(YES);
-    NSMutableArray<NSNumber *> *queue = [NSMutableArray array];
-    [queue addObject:@(start)];
+    SimpleQueue<NSNumber *> *queue = [SimpleQueue queue];
+    [queue enqueue:@(start)];
     NSMutableArray<NSNumber *> *prev = [NSMutableArray arrayWithCapacity:_vertexCount];
     for (int i = 0; i < _vertexCount; i++) {
         prev[i] = @(-1);
     }
-    while (queue.count > 0) {
-        NSInteger vertex = [queue.firstObject integerValue];
-        [queue removeObjectAtIndex:0];
+    while ([queue isEmpty]) {
+        NSInteger vertex = [[queue dequeue] integerValue];
         NSInteger linkSize = [_vertexs[vertex] count];
         for (int i = 0; i < linkSize; i++) {
             NSInteger linkVertex = [_vertexs[vertex][i] integerValue];
@@ -64,7 +64,7 @@
                     return;
                 }
                 visited[linkVertex] = @(YES);
-                [queue addObject:@(linkVertex)];
+                [queue enqueue:@(linkVertex)];
             }
         }
     }

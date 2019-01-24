@@ -45,7 +45,7 @@ void printPath(NSInteger start, NSInteger target, int predecessor[]) {
 
 - (void)dijkstraWithStart:(NSInteger)start target:(NSInteger)target {
     // 用来还原最短路径
-    int predecessor[_vertexCount];
+    NSInteger predecessor[_vertexCount];
     for (int i = 0; i < _vertexCount; i++) {
         predecessor[i] = 0;
     }

@@ -9,15 +9,15 @@
 #import "Heap.h"
 #import "DijkstraGraph.h"
 
-void swapArray(NSMutableArray *array, int i, int j) {
+void swapArray(NSMutableArray *array, NSInteger i, NSInteger j) {
     id temp = array[i];
     array[i] = array[j];
     array[j] = temp;
 }
 
-void heapifyArray(NSMutableArray *a, int length, int i) {
+void heapifyArray(NSMutableArray *a, NSInteger length, NSInteger i) {
     while (YES) {
-        int maxPos = i;
+        NSInteger maxPos = i;
         Vertex *v1 = a[i];
         Vertex *v2 = a[i*2];
         Vertex *vMax = a[maxPos];
@@ -38,15 +38,15 @@ void heapifyArray(NSMutableArray *a, int length, int i) {
 
 @interface Heap() {
     NSMutableArray *array;
-    int _capicity;
-    int count;
+    NSInteger _capicity;
+    NSInteger count;
 }
 
 @end
 
 @implementation Heap
 
-- (instancetype)initWithCapicity:(int)capicity {
+- (instancetype)initWithCapicity:(NSInteger)capicity {
     self = [super init];
     if (self) {
         array = [NSMutableArray arrayWithCapacity:capicity];
@@ -65,7 +65,7 @@ void heapifyArray(NSMutableArray *a, int length, int i) {
     }
     ++count;
     array[count] = data;
-    int i = count;
+    NSInteger i = count;
     Vertex *v1 = array[i];
     Vertex *v2 = array[i/2];
     if (!([v1 isKindOfClass:[Vertex class]] && [v2 isKindOfClass:[Vertex class]])) {

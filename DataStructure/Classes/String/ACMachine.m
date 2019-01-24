@@ -7,6 +7,7 @@
 //
 
 #import "ACMachine.h"
+#import "SimpleQueue.h"
 
 #define kEmptyNode [NSNull null]
 
@@ -46,6 +47,9 @@
 - (void)insert:(NSString *)text {
     ACNode *tempNode = root;
     for (int i = 0; i < text.length; i++) {
+        //判断字符是否在当前结点的children中存在
+        //若不存在，则将保存
+        //若已存在，更新当前结点
         unichar tempChar = [text characterAtIndex:i];
         int index = tempChar - 'a';
         if (tempNode.children[index] == kEmptyNode) {
@@ -74,12 +78,11 @@
 }
 
 - (void)buildFailurePointer {
-    NSMutableArray *queue = [NSMutableArray array];
+    SimpleQueue<ACNode *> *queue = [SimpleQueue queue];
     root.fail = nil;
-    [queue addObject:root];
-    while (queue.count > 0) {
-        ACNode *firstNode = [queue firstObject];
-        [queue removeObject:firstNode];
+    [queue enqueue:root];
+    while (![queue isEmpty]) {
+        ACNode *firstNode = [queue dequeue];
         for (int i = 0; i < 26; i++) {
             ACNode *child = firstNode.children[i];
             if ((id)child == kEmptyNode) {
@@ -101,7 +104,7 @@
                     child.fail = root;
                 }
             }
-            [queue addObject:child];
+            [queue enqueue:child];
         }
     }
 }

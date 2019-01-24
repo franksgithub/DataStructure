@@ -10,7 +10,7 @@
 
 @interface Heap<__covariant ObjectType> : NSObject
 
-- (instancetype)initWithCapicity:(int)capicity;
+- (instancetype)initWithCapicity:(NSInteger)capicity;
 
 - (void)insertData:(ObjectType)data;
 

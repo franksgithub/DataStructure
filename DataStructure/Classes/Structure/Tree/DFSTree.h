@@ -11,7 +11,9 @@
 
 @interface DFSTree : NSObject
 
-+ (void)dfsByStackWithTreeNode:(DFSTreeNode *)treeNode;
+- (void)dfsByStack;
+
+- (void)buildTreeWithCString:(char *)cStr;
 
 @end
 
