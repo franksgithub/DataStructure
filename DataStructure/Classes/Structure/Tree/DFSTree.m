@@ -28,11 +28,6 @@
 - (void)dfsByStack {
     SimpleStack<DFSTreeNode *> *stack = [SimpleStack stack];
     [stack push:_rootNode];
-    //数据存储在服务器端，也是时间换空间的一种表现
-    //iOS设备始终使用又缓存，并开启垂直同步
-    /*
-     
-     */
     while (![stack isEmpty]) {
         DFSTreeNode *node = [stack pop];
         if (node.sons.count == 0) {

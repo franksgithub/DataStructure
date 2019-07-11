@@ -133,6 +133,14 @@ int max(int x, int y, int z) {
     return max;
 }
 
+NSNumber * max_self(NSNumber *x, NSNumber *y, NSNumber *z) {
+    NSInteger max = x.integerValue > y.integerValue ? x.integerValue : y.integerValue;
+    if (z.integerValue > max) {
+        max = z.integerValue;
+    }
+    return @(max);
+}
+
 //最长公共子串
 int lcsDP(char *strA, int aLen, char *strB, int bLen) {
     int **maxLcs = malloc(sizeof(int *) * aLen);
@@ -173,6 +181,55 @@ int lcsDP(char *strA, int aLen, char *strB, int bLen) {
     return tempMax;
 }
 
+NSInteger lcs_objc(NSString *strA, NSString *strB) {
+    NSInteger aLen = strA.length;
+    NSInteger bLen = strB.length;
+    NSMutableArray<NSMutableArray *> *max_lcs = [NSMutableArray arrayWithCapacity:strA.length];
+    NSMutableArray<NSNumber *> *tempArr;
+    for (int i = 0; i < aLen; i++) {
+        tempArr = [NSMutableArray arrayWithCapacity:bLen];
+        for (int j = 0; j < bLen; j++) {
+            tempArr[j] = @(0);
+        }
+        max_lcs[i] = tempArr;
+    }
+    unichar ca, cb;
+    ca = [strA characterAtIndex:0];
+    for (int j = 0; j < bLen; j++) {
+        cb = [strB characterAtIndex:j];
+        if (ca == cb) {
+            max_lcs[0][j] = @(1);
+        } else if (j != 0) {
+            max_lcs[0][j] = max_lcs[0][j-1];
+        } else {
+            max_lcs[0][j] = @(0);
+        }
+    }
+    cb = [strB characterAtIndex:0];
+    for (int i = 0; i < aLen; ++i) {
+        ca = [strA characterAtIndex:i];
+        if (ca == cb) {
+            max_lcs[i][0] = @(1);
+        } else if (i != 0) {
+            max_lcs[i][0] = max_lcs[i-1][0];
+        } else {
+            max_lcs[i][i] = @(0);
+        }
+    }
+    for (int i = 1; i < aLen; i++) {
+        for (int j = 1; j < bLen; j++) {
+            if ([strA characterAtIndex:i] == [strB characterAtIndex:j]) {
+                max_lcs[i][j] = max_self(max_lcs[i-1][j], max_lcs[i][j-1], @([max_lcs[i-1][j-1] integerValue] + 1));
+            } else {
+                max_lcs[i][j] = max_self(max_lcs[i-1][j], max_lcs[i][j-1], max_lcs[i-1][j-1]);
+            }
+        }
+    }
+    NSInteger tempMax = [max_lcs[aLen-1][bLen-1] integerValue];
+    NSLog(@"******* maxLcs : %ld *******", tempMax);
+    return tempMax;
+}
+
 #pragma mark - 矩阵最短路径
 
 //矩阵最短路径，回溯
@@ -194,21 +251,27 @@ void minDistBT(int i, int j, int dist, int w[5][5], int n) {
 }
 
 //矩阵最短路径 DP
+//状态转移表法
 int minDistDP(int matrix[4][4], int len) {
     int states[len][len];
-    NSLog(@" 1,1 : %d", states[1][1]);
     int sum = 0;
-    for (int j = 0; j < len; ++j) {
+    //第一行
+    for (int j = 0; j < len; j++) {
         sum += matrix[0][j];
+        states[0][j] = sum;
     }
     sum = 0;
-    for (int i = 0; i < len; ++i) {
+    //第一列
+    for (int i = 0; i < len; i++) {
         sum += matrix[i][0];
         states[i][0] = sum;
     }
+    int leftState = 0, topState = 0;
     for (int i = 1; i < len; i++) {
         for (int j = 1; j < len; j++) {
-            states[i][j] = matrix[i][j] + MIN(states[i][j-1], states[i-1][j]);
+            leftState = states[i][j-1];
+            topState = states[i-1][j];
+            states[i][j] = matrix[i][j] + MIN(leftState, topState);
         }
     }
     int tempDist = states[len-1][len-1];
@@ -216,9 +279,10 @@ int minDistDP(int matrix[4][4], int len) {
     return tempDist;
 }
 
+//状态转移方程
 int length = 4;
 int matrix[4][4] = {{1,2,3,4}, {1,2,3,4}, {1,2,3,4}, {1,2,3,4}};
-int mem[4][4];
+int mem[4][4]; /**< 备忘录 */
 
 int minDistForMatrixDP(int i, int j) {
     if (i == 0 && j == 0) {
@@ -229,11 +293,11 @@ int minDistForMatrixDP(int i, int j) {
     }
     int minLeft = INT_MAX;
     if (j - 1 >= 0) {
-        minLeft = minDistForMatrixDP(i, j-1);
+        minLeft = minDistForMatrixDP(i, j - 1);
     }
     int minUp = INT_MAX;
     if (i - 1 >= 0) {
-        minUp = minDistForMatrixDP(i-1, j);
+        minUp = minDistForMatrixDP(i - 1, j);
     }
     int curMinDist = matrix[i][j] + MIN(minLeft, minUp);
     mem[i][j] = curMinDist;

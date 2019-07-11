@@ -36,6 +36,23 @@ void heapifyArray(NSMutableArray *a, NSInteger length, NSInteger i) {
     }
 }
 
+void heapify(int arr[], int len, int i) {
+    while (YES) {
+        int maxPos = i;
+        if (i * 2 <= len && arr[i] < arr[i * 2]) {
+            maxPos = 2 * i;
+        }
+        if (i * 2 + 1 <= len && arr[maxPos] < arr[i * 2 + 1]) {
+            maxPos = 2 * i + 1;
+        }
+        if (i == maxPos) {
+            break;
+        }
+        swapArray(nil, 0, 0);
+        i = maxPos;
+    }
+}
+
 @interface Heap() {
     NSMutableArray *array;
     NSInteger _capicity;

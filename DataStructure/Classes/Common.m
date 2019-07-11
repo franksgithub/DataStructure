@@ -184,6 +184,7 @@ int bagDP(int weight[], int n, int w) {
 
 
 int knapsack2(int weight[], int n, int w) {
+    /*
     BOOL *states = malloc(sizeof(BOOL) * (w + 1));
     states[0] = YES;
     states[weight[0]] = YES;
@@ -198,6 +199,26 @@ int knapsack2(int weight[], int n, int w) {
     }
     for (int i = w; i >= 0; i--) {
         if (states[i]) {
+            return i;
+        }
+    }
+     */
+    NSMutableArray<NSNumber *> *states = [NSMutableArray arrayWithCapacity:w + 1];
+    for (int i = 0; i <= w; i++) {
+        states[i] = @(NO);
+    }
+    states[0] = @(YES);
+    states[weight[0]] = @(YES);
+    for (int i = 1; i < n; i++) {
+        int tempW = weight[i];
+        for (int j = w - tempW; j >= 0; j--) {
+            if ([states[j] boolValue]) {
+                states[j + tempW] = @(YES);
+            }
+        }
+    }
+    for (int i = w; i >= 0; i--) {
+        if ([states[i] boolValue]) {
             return i;
         }
     }
@@ -231,6 +252,7 @@ int bagDP2(int weight[], int n, int w) {
 
 //重量加价值
 int knapsack3(int weight[], int value[], int n, int w) {
+    /*
     int **states = malloc(sizeof(int *) * n);
     for (int i = 0; i < n; i++) {
         states[i] = malloc(sizeof(int) * (w + 1));
@@ -265,6 +287,40 @@ int knapsack3(int weight[], int value[], int n, int w) {
     for (int i = 0; i <= w; i++) {
         if (states[n-1][i] > maxValue) {
             maxValue = states[n-1][i];
+        }
+    }
+     */
+    NSMutableArray *states = [NSMutableArray arrayWithCapacity:n];
+    for (int i = 0; i < n; i++) {
+        NSMutableArray *tempStates = [NSMutableArray arrayWithCapacity:w + 1];
+        for (int j = 0; j <= w; j++) {
+            tempStates[j] = @(-1);
+        }
+        states[i] = tempStates;
+    }
+    states[0][0] = @(0);
+    states[0][weight[0]] = @(value[0]);
+    for (int i = 1; i < n; i++) {
+        for (int j = 0; j <= w; j++) {
+            if ([states[i-1][j] intValue] >= 0) {
+                states[i][j] = states[i-1][j];
+            }
+        }
+        int tempW = weight[i];
+        for (int j = 0; j <= w - tempW; j++) {
+            if ([states[i - 1][j] intValue] >= 0) {
+                int v = [states[i-1][j] intValue] + value[i];
+                if (v > [states[i][j + weight[i]] intValue]) {
+                    states[i][j + weight[i]] = @(v);
+                    NSLog(@"put in %d", weight[i]);
+                }
+            }
+        }
+    }
+    int maxValue = -1;
+    for (int i = 0; i <= w; i++) {
+        if ([states[n-1][i] intValue] > maxValue) {
+            maxValue = [states[n-1][i] intValue];
         }
     }
     return maxValue;

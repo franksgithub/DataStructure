@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F70BB8A521B4BD03002FD205 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = F70BB8A421B4BD03002FD205 /* Graph.m */; };
+		F714055C229E7C3200036AAB /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F714055B229E7C3200036AAB /* Student.m */; };
+		F714055F229E7DAC00036AAB /* NSObject+Cate.m in Sources */ = {isa = PBXBuildFile; fileRef = F714055E229E7DAC00036AAB /* NSObject+Cate.m */; };
 		F7274B6121E59C2600133F25 /* DFSTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6021E59C2600133F25 /* DFSTreeNode.m */; };
 		F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6321E59DFE00133F25 /* DFSTree.m */; };
 		F7274B6621E5A07A00133F25 /* DFSTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7274B6521E5A07A00133F25 /* DFSTreeTest.m */; };
@@ -20,6 +22,8 @@
 		F748E36621E88CD900C2DC4E /* LinkListQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F748E36321E88CD900C2DC4E /* LinkListQueue.m */; };
 		F74CDAD6217440830078222F /* AllSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD5217440830078222F /* AllSort.m */; };
 		F74CDAD8217440D00078222F /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F74CDAD7217440D00078222F /* SortTests.m */; };
+		F751D24621FFFD6A00FF689E /* QMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F751D24521FFFD6A00FF689E /* QMemoryCache.m */; };
+		F751D2562200271E00FF689E /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F751D2552200271E00FF689E /* YYDispatchQueuePool.m */; };
 		F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */; };
 		F75EFEFF21C0A5EF007A0DCF /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = F75EFEFE21C0A5EF007A0DCF /* Trie.m */; };
 		F762DB9D21DF5A8000F75F8A /* SortGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = F762DB9C21DF5A8000F75F8A /* SortGraph.m */; };
@@ -36,6 +40,8 @@
 		F783EB6821800BC5000DB897 /* SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB6721800BC5000DB897 /* SearchTests.m */; };
 		F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F783EB7021801016000DB897 /* SingleLinkedList.m */; };
 		F7840A0721B6251600A4BB1B /* HeapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7840A0621B6251600A4BB1B /* HeapTests.m */; };
+		F7993A5322028E6F0010150E /* SkipList.m in Sources */ = {isa = PBXBuildFile; fileRef = F7993A5222028E6F0010150E /* SkipList.m */; };
+		F7993A632202A0ED0010150E /* SkipListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7993A622202A0ED0010150E /* SkipListTest.m */; };
 		F7A7A4AE216EEB47007E86C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4AD216EEB47007E86C5 /* AppDelegate.m */; };
 		F7A7A4B1216EEB47007E86C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7A4B0216EEB47007E86C5 /* ViewController.m */; };
 		F7A7A4B4216EEB47007E86C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A7A4B2216EEB47007E86C5 /* Main.storyboard */; };
@@ -50,6 +56,7 @@
 		F7BC88D721E32DF400745EDE /* DijkstraTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88D621E32DF400745EDE /* DijkstraTest.m */; };
 		F7BC88DE21E3490A00745EDE /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88DD21E3490A00745EDE /* Stack.m */; };
 		F7BC88E121E34BF300745EDE /* TwoStackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC88E021E34BF300745EDE /* TwoStackQueue.m */; };
+		F7CAEF3622013EED001FCAC6 /* Producer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CAEF3522013EED001FCAC6 /* Producer.m */; };
 		F7F0852321991A4C000096F4 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F0852221991A4C000096F4 /* BinaryTree.m */; };
 		F7F0852821991DA4000096F4 /* BinaryTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F0852721991DA4000096F4 /* BinaryTreeTest.m */; };
 		F7FCC33821AC22F000C33EA7 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = F7FCC33721AC22F000C33EA7 /* HeapSort.m */; };
@@ -75,6 +82,10 @@
 /* Begin PBXFileReference section */
 		F70BB8A321B4BD03002FD205 /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		F70BB8A421B4BD03002FD205 /* Graph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		F714055A229E7C3200036AAB /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		F714055B229E7C3200036AAB /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		F714055D229E7DAC00036AAB /* NSObject+Cate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Cate.h"; sourceTree = "<group>"; };
+		F714055E229E7DAC00036AAB /* NSObject+Cate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Cate.m"; sourceTree = "<group>"; };
 		F7274B5F21E59C2600133F25 /* DFSTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSTreeNode.h; sourceTree = "<group>"; };
 		F7274B6021E59C2600133F25 /* DFSTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSTreeNode.m; sourceTree = "<group>"; };
 		F7274B6221E59DFE00133F25 /* DFSTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSTree.h; sourceTree = "<group>"; };
@@ -96,6 +107,10 @@
 		F74CDAD4217440830078222F /* AllSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllSort.h; sourceTree = "<group>"; };
 		F74CDAD5217440830078222F /* AllSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllSort.m; sourceTree = "<group>"; };
 		F74CDAD7217440D00078222F /* SortTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortTests.m; sourceTree = "<group>"; };
+		F751D24421FFFD6A00FF689E /* QMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMemoryCache.h; sourceTree = "<group>"; };
+		F751D24521FFFD6A00FF689E /* QMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMemoryCache.m; sourceTree = "<group>"; };
+		F751D2542200271E00FF689E /* YYDispatchQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDispatchQueuePool.h; sourceTree = "<group>"; };
+		F751D2552200271E00FF689E /* YYDispatchQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDispatchQueuePool.m; sourceTree = "<group>"; };
 		F75B6F3321B4FF2D0021EBF1 /* GraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphTests.m; sourceTree = "<group>"; };
 		F75EFEFD21C0A5EF007A0DCF /* Trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
 		F75EFEFE21C0A5EF007A0DCF /* Trie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Trie.m; sourceTree = "<group>"; };
@@ -118,6 +133,9 @@
 		F783EB6F21801016000DB897 /* SingleLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLinkedList.h; sourceTree = "<group>"; };
 		F783EB7021801016000DB897 /* SingleLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLinkedList.m; sourceTree = "<group>"; };
 		F7840A0621B6251600A4BB1B /* HeapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapTests.m; sourceTree = "<group>"; };
+		F7993A5122028E6F0010150E /* SkipList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SkipList.h; sourceTree = "<group>"; };
+		F7993A5222028E6F0010150E /* SkipList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkipList.m; sourceTree = "<group>"; };
+		F7993A622202A0ED0010150E /* SkipListTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkipListTest.m; sourceTree = "<group>"; };
 		F7A7A4A9216EEB47007E86C5 /* DataStructure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A7A4AC216EEB47007E86C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F7A7A4AD216EEB47007E86C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +162,8 @@
 		F7BC88DD21E3490A00745EDE /* Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		F7BC88DF21E34BF300745EDE /* TwoStackQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoStackQueue.h; sourceTree = "<group>"; };
 		F7BC88E021E34BF300745EDE /* TwoStackQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoStackQueue.m; sourceTree = "<group>"; };
+		F7CAEF3422013EED001FCAC6 /* Producer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Producer.h; sourceTree = "<group>"; };
+		F7CAEF3522013EED001FCAC6 /* Producer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Producer.m; sourceTree = "<group>"; };
 		F7F0852121991A4C000096F4 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		F7F0852221991A4C000096F4 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		F7F0852721991DA4000096F4 /* BinaryTreeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeTest.m; sourceTree = "<group>"; };
@@ -235,6 +255,25 @@
 			path = Sort;
 			sourceTree = "<group>";
 		};
+		F751D24321FFFD3D00FF689E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				F751D2532200271E00FF689E /* YY */,
+				F751D24421FFFD6A00FF689E /* QMemoryCache.h */,
+				F751D24521FFFD6A00FF689E /* QMemoryCache.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		F751D2532200271E00FF689E /* YY */ = {
+			isa = PBXGroup;
+			children = (
+				F751D2542200271E00FF689E /* YYDispatchQueuePool.h */,
+				F751D2552200271E00FF689E /* YYDispatchQueuePool.m */,
+			);
+			path = YY;
+			sourceTree = "<group>";
+		};
 		F769BA8821DC68D600801BF3 /* DP */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +342,15 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		F7993A5022028E540010150E /* SkipList */ = {
+			isa = PBXGroup;
+			children = (
+				F7993A5122028E6F0010150E /* SkipList.h */,
+				F7993A5222028E6F0010150E /* SkipList.m */,
+			);
+			path = SkipList;
+			sourceTree = "<group>";
+		};
 		F7A7A4A0216EEB47007E86C5 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +398,7 @@
 				F7BC88D621E32DF400745EDE /* DijkstraTest.m */,
 				F7274B6521E5A07A00133F25 /* DFSTreeTest.m */,
 				F7274B7F21E5E13F00133F25 /* BitMapTest.m */,
+				F7993A622202A0ED0010150E /* SkipListTest.m */,
 			);
 			path = DataStructureTests;
 			sourceTree = "<group>";
@@ -366,6 +415,9 @@
 		F7A7A4DE216EEB5E007E86C5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7993A5022028E540010150E /* SkipList */,
+				F7CAEF3322013ED0001FCAC6 /* Producer-Consumer */,
+				F751D24321FFFD3D00FF689E /* Cache */,
 				F769BA8821DC68D600801BF3 /* DP */,
 				F77E1D2D21B764FD009F919D /* String */,
 				F783EB6921801016000DB897 /* Structure */,
@@ -374,6 +426,10 @@
 				F74CDAD3217440830078222F /* Sort */,
 				F77E1D5A21B7CD90009F919D /* Common.h */,
 				F77E1D5B21B7CD90009F919D /* Common.m */,
+				F714055A229E7C3200036AAB /* Student.h */,
+				F714055B229E7C3200036AAB /* Student.m */,
+				F714055D229E7DAC00036AAB /* NSObject+Cate.h */,
+				F714055E229E7DAC00036AAB /* NSObject+Cate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -391,6 +447,15 @@
 				F748E35B21E87CDF00C2DC4E /* SimpleQueue.m */,
 			);
 			path = Stack;
+			sourceTree = "<group>";
+		};
+		F7CAEF3322013ED0001FCAC6 /* Producer-Consumer */ = {
+			isa = PBXGroup;
+			children = (
+				F7CAEF3422013EED001FCAC6 /* Producer.h */,
+				F7CAEF3522013EED001FCAC6 /* Producer.m */,
+			);
+			path = "Producer-Consumer";
 			sourceTree = "<group>";
 		};
 		F7F0852021991A35000096F4 /* BinaryTree */ = {
@@ -535,14 +600,19 @@
 				F769BA8B21DC68F900801BF3 /* DP.m in Sources */,
 				F70BB8A521B4BD03002FD205 /* Graph.m in Sources */,
 				F7F0852321991A4C000096F4 /* BinaryTree.m in Sources */,
+				F751D24621FFFD6A00FF689E /* QMemoryCache.m in Sources */,
 				F7A7A4B1216EEB47007E86C5 /* ViewController.m in Sources */,
 				F7A7A4BC216EEB49007E86C5 /* main.m in Sources */,
 				F748E36521E88CD900C2DC4E /* CircleQueue.m in Sources */,
+				F714055F229E7DAC00036AAB /* NSObject+Cate.m in Sources */,
 				F77E1D3021B76510009F919D /* StringMatch.m in Sources */,
 				F7FCC33821AC22F000C33EA7 /* HeapSort.m in Sources */,
 				F77E1D5C21B7CD90009F919D /* Common.m in Sources */,
+				F7993A5322028E6F0010150E /* SkipList.m in Sources */,
+				F714055C229E7C3200036AAB /* Student.m in Sources */,
 				F7274B7E21E5DD2300133F25 /* BitMap.m in Sources */,
 				F7274B6421E59DFE00133F25 /* DFSTree.m in Sources */,
+				F751D2562200271E00FF689E /* YYDispatchQueuePool.m in Sources */,
 				F748E35C21E87CDF00C2DC4E /* SimpleQueue.m in Sources */,
 				F783EB7521801016000DB897 /* SingleLinkedList.m in Sources */,
 				F7BC88C621E2E60A00745EDE /* DijkstraGraph.m in Sources */,
@@ -555,6 +625,7 @@
 				F748E36621E88CD900C2DC4E /* LinkListQueue.m in Sources */,
 				F7BC88D521E2FE8D00745EDE /* Heap.m in Sources */,
 				F7BC88E121E34BF300745EDE /* TwoStackQueue.m in Sources */,
+				F7CAEF3622013EED001FCAC6 /* Producer.m in Sources */,
 				F74CDAD6217440830078222F /* AllSort.m in Sources */,
 				F762DB9D21DF5A8000F75F8A /* SortGraph.m in Sources */,
 				F746692421C3916700B105A6 /* ACMachine.m in Sources */,
@@ -578,6 +649,7 @@
 				F769BA8E21DC6BB800801BF3 /* DPTests.m in Sources */,
 				F7BC88D721E32DF400745EDE /* DijkstraTest.m in Sources */,
 				F75B6F3421B4FF2D0021EBF1 /* GraphTests.m in Sources */,
+				F7993A632202A0ED0010150E /* SkipListTest.m in Sources */,
 				F77E1D5E21B7D4AB009F919D /* CommonTest.m in Sources */,
 				F783EB6821800BC5000DB897 /* SearchTests.m in Sources */,
 				F7840A0721B6251600A4BB1B /* HeapTests.m in Sources */,

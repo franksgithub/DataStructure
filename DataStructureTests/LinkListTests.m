@@ -43,8 +43,8 @@
     node8.next = node9;
     node9.next = node5;
     
-    [SingleLinkedList checkCircle:node1];
-    
+    BOOL res = [SingleLinkedList checkCircle:node1];
+    NSLog(@"res : %@", res ? @"YES" : @"NO");
 }
 
 - (void)testPerformanceExample {

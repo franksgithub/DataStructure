@@ -34,6 +34,14 @@
 }
 
 - (int)dequeue {
+    /*
+    if ([outStack isEmpty]) {
+        while (![inStack isEmpty]) {
+            [outStack push:[inStack pop]];
+        }
+    }
+    return [outStack pop];
+     */
     if ([outStack isEmpty]) {
         while (![inStack isEmpty]) {
             [outStack push:[inStack pop]];

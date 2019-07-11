@@ -69,4 +69,11 @@
     trianglePath();
 }
 
+- (void)testLcs_objc {
+    NSString *strA = @"h3leoworldf";
+    NSString *strB = @"helloworrdd";
+    NSInteger dis = lcs_objc(strA, strB);
+    NSLog(@"dis : %ld", dis);
+}
+
 @end

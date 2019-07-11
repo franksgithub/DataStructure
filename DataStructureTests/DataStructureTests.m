@@ -12,6 +12,8 @@
 #import "CircleQueue.h"
 #import "SingleLinkedList.h"
 #import "TwoStackQueue.h"
+#import "Student.h"
+#import "NSObject+Cate.h"
 
 @interface DataStructureTests : XCTestCase
 
@@ -212,11 +214,26 @@
     NSLog(@" ele : %d", ele);
 }
 
+- (void)testMalloc {
+    void *p1 = malloc(sizeof(int) * 4);
+    free(p1);
+    void *p2 = malloc(sizeof(int) * 2);
+    ((int *)p2)[0] = 20;
+    int t1 = 10;
+    int a[] = {10,20};
+    NSLog(@"p1-%p, p2-%p, t1-%p, a3 - %d", p1, p2, &t1, a[1]);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testStu {
+//    [Student lala];
+    [Student say];
 }
 
 @end

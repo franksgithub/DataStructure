@@ -28,3 +28,5 @@ int minDistForMatrixDP(int i, int j);
 int lwstDPTest(char *strA, int aLen, char *strB, int bLen);
 
 int trianglePath();
+
+NSInteger lcs_objc(NSString *strA, NSString *strB);

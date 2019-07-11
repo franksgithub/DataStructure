@@ -21,6 +21,7 @@
 - (instancetype)initWithCapacity:(int)capacity {
     self = [super init];
     if (self) {
+        //calloc会把新申请的空间清0
         items = calloc(capacity, sizeof(int));
         numOfEle = 0;
         _capacity = capacity;

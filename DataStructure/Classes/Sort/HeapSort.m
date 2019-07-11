@@ -10,7 +10,7 @@
 #import "AllSort.h"
 
 //自上往下堆化
-void heapify(int a[], int length, int i) {
+void heapify1(int a[], int length, int i) {
     while (YES) {
         int maxPos = i;
         if (i*2 <= length && a[i] < a[i*2]) {
@@ -67,7 +67,7 @@ void heapify(int a[], int length, int i) {
     int removedData = array[1];
     array[1] = array[count];
     --count;
-    heapify(array, count, 1);
+    heapify1(array, count, 1);
     return removedData;
 }
 
@@ -75,7 +75,7 @@ void heapify(int a[], int length, int i) {
 
 void buildHeap(int a[], int length) {
     for (int i = length / 2; i >= 1; --i) {
-        heapify(a, length, i);
+        heapify1(a, length, i);
     }
 }
 
@@ -85,7 +85,7 @@ void heap_sort(int a[], int length) {
     while (k > 1) {
         swap(a, 1, k);
         --k;
-        heapify(a, k, 1);
+        heapify1(a, k, 1);
     }
 }
 

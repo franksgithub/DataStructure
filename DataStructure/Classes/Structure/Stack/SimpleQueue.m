@@ -33,8 +33,8 @@
 }
 
 - (id)dequeue {
-    id ele = [_queue lastObject];
-    [_queue removeLastObject];
+    id ele = [_queue firstObject];
+    [_queue removeObject:ele];
     return ele;
 }
 

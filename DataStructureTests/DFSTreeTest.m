@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "DFSTree.h"
 #import "DFSTreeNode.h"
+#import "SimpleQueue.h"
 
 @interface DFSTreeTest : XCTestCase
 
@@ -56,6 +57,16 @@
      散列表是动态数据结构，不停的有数据插入、删除，所以每次需要顺序遍历其中的数据的时候，都需要先排序，效率很低，为了解决这个问题，我们将散列表和链表(跳表)结合在一起使用
      如何存储这
      */
+}
+
+- (void)testQueue {
+    SimpleQueue<NSString *> *queue = [SimpleQueue queue];
+    [queue enqueue:@"one"];
+    [queue enqueue:@"two"];
+    [queue enqueue:@"three"];
+    while (![queue isEmpty]) {
+        NSLog(@" ***************** %@ ***************** ", [queue dequeue]);
+    }
 }
 
 @end

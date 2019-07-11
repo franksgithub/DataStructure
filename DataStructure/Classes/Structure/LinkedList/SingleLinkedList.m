@@ -260,29 +260,51 @@
 }
 
 + (ListNode *)listByDeleteLastKth:(NSInteger)k inList:(ListNode *)list {
+//    ListNode *fast = list;
+//    int i = 1;
+//    while (fast && i < k) {
+//        fast = fast.next;
+//        i++;
+//    }
+//
+//    if (fast == nil) return list;
+//
+//    ListNode *slow = list;
+//    ListNode *preNode = nil;
+//    while (fast.next) {
+//        fast = fast.next;
+//        preNode = slow;
+//        slow= slow.next;
+//    }
+//
+//    if (preNode == nil) {
+//        list = list.next;
+//    } else {
+//        preNode.next = preNode.next.next;
+//    }
+//    return list;
+//    12 3 4 5 67
     ListNode *fast = list;
     int i = 1;
     while (fast && i < k) {
         fast = fast.next;
         i++;
     }
-    
-    if (fast == nil) return list;
-    
+    if (!fast) {
+        return list;
+    }
     ListNode *slow = list;
-    ListNode *preNode = nil;
+    ListNode *pre = nil;
     while (fast.next) {
         fast = fast.next;
-        preNode = slow;
-        slow= slow.next;
+        pre = slow;
+        slow = slow.next;
     }
-    
-    if (preNode == nil) {
+    if (pre) {
         list = list.next;
     } else {
-        preNode.next = preNode.next.next;
+        pre.next = pre.next.next;
     }
-    
     return list;
 }
 

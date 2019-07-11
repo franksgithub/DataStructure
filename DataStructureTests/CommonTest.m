@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Common.h"
+#import "Producer.h"
 
 @interface CommonTest : XCTestCase
 
@@ -24,7 +25,7 @@
 }
 
 - (void)testExample {
-    double money = 76549.28f;
+    double money = 76500.08f;
     NSString *moneyStr = [Common transforMoneyWithValue:money];
     NSLog(@"money : %@", moneyStr);
 }
@@ -55,7 +56,7 @@
 }
 
 - (void)testKnapsack3 {
-    int weight[] = {2, 2, 4, 6, 3};
+    int weight[] = {2, 2, 8, 6, 3};
     int value[] = {3,4,8,9,6};
     int n = 5;
     int w = 9;
@@ -70,6 +71,14 @@
 - (void)testBag {
     int items[] = {10, 22, 33, 55, 2, 33, 78, 23, 90, 30};
     bag(0, 0, items, 10, 100);
+}
+
+- (void)testProduce {
+    Queue *queue = [[Queue alloc] init];
+    Producer *producer = [[Producer alloc] initWithQueue:queue];
+    Consumer *consumer = [[Consumer alloc] initWithQueue:queue];
+    [consumer consume];
+    [producer produce:100];
 }
 
 - (void)testPerformanceExample {
